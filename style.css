@@ -185,6 +185,22 @@ html {
 
 .foto-container {
     flex-shrink: 0;
+    position: relative; /* Necessário para posicionar a capa invisível */
+    width: 200px;       /* Mantém o container no tamanho exato da foto */
+    height: 200px;
+}
+
+/* Esta é a CAPA INVISÍVEL que bloqueia o clique direto na imagem */
+.foto-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;           /* Acompanha o formato redondo */
+    background: rgba(0, 0, 0, 0); /* Totalmente transparente */
+    z-index: 2;                   /* Fica flutuando por cima da foto */
 }
 
 .foto-perfil {
@@ -193,7 +209,23 @@ html {
     border-radius: 50%; 
     object-fit: cover;
     border: 5px solid #E2ECE9;
+    box-sizing: border-box; /* Garante que a borda de 5px não aumente o tamanho da foto */
+    position: relative;
+    z-index: 1;             /* Fica renderizada por baixo da capa */
+
+    /* Bloqueio de arrasto (Drag-and-Drop) */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+
+    /* Evita que o usuário selecione a imagem */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
 
 .texto-sobre {
     flex: 1;
