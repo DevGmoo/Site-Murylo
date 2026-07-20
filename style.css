@@ -1,0 +1,363 @@
+/* RESET DE ESTILOS UNIVERSAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Evita rolagem errada ao clicar nos links do menu */
+html {
+    scroll-behavior: smooth;
+}
+
+/* LAYOUT ESTRUTURAL (BARRA LATERAL + CONTEÚDO) */
+.layout-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #E2ECE9; /* Uma coloração viva, fresca e moderna de fundo */
+}
+
+/* 1. ESTILO DA BARRA LATERAL */
+.barra-lateral {
+    width: 280px;
+    background-color: #8ca778; /* O verde do seu irmão preservado aqui */
+    padding: 40px 24px;
+    position: fixed; /* Deixa a barra travada na esquerda enquanto o site rola */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.05);
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    margin-bottom: 20px;
+
+}
+
+#logo img {
+    width: 50px;
+    height:100px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.logo .sublogo {
+    display: block;
+    color: #E2ECE9;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px; /* Sobe o menu para o centro visual */
+}
+
+.menu-lateral a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 9px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu-lateral a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding-left: 22px; /* Pequeno efeito de movimento */
+}
+
+/* Botão de destaque dentro do menu */
+.menu-lateral .btn-menu {
+    background-color: #FFFFFF;
+    color: #8ca778;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.menu-lateral .btn-menu:hover {
+    background-color: #2D221E; /* Tom escuro para contraste ao passar o mouse */
+    color: #FFFFFF;
+    padding-left: 16px;
+}
+
+/* 2. ÁREA DO CONTEÚDO PRINCIPAL */
+.conteudo-principal {
+    flex: 1;
+    margin-left: 280px; /* Empurra o conteúdo para o lado para não cobrir a barra lateral */
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espaçamento idêntico entre as seções */
+}
+
+/* OS RETÂNGULOS BRANCOS ARREDONDADOS (Sua excelente ideia!) */
+.card-arredondado {
+    background-color: #FFFFFF;
+    border-radius: 20px; /* Bordas arredondadas marcantes */
+    padding: 45px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* Sombra sutil e premium */
+    transition: transform 0.3s ease;
+}
+
+/* ESTILOS DE TEXTO DENTRO DOS CARDS (Usando o verde dele para os textos) */
+.card-arredondado h1 {
+    color: #8ca778; /* O verde dele dando vida ao título principal */
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.card-arredondado h2 {
+    color: #2D221E; /* Um tom escuro elegante para os subtítulos do site */
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.card-arredondado h3 {
+    color: #8ca778; /* Verde dele nos títulos menores */
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.card-arredondado p {
+    color: #555555; /* Cinza confortável para leitura de textos normais */
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Tags pequenas de subtítulo (ex: "Sobre o Profissional") */
+.tag-titulo {
+    display: inline-block;
+    color: #8ca778;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+/* COMPONENTES E SEÇÕES ESPECÍFICAS */
+
+/* Botão Principal do WhatsApp */
+.btn-principal {
+    display: inline-block;
+    background-color: #8ca778;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 50px; 
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-principal:hover {
+    background-color: #769062; 
+}
+
+/* Seção Sobre Mim */
+.sobre {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.foto-container {
+    flex-shrink: 0;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 5px solid #E2ECE9;
+}
+
+.texto-sobre {
+    flex: 1;
+}
+
+/* Seção de Serviços/Cards Menores */
+.servicos .alinhamento-central {
+    margin-bottom: 25px;
+}
+
+.lista-servicos {
+    display: flex;
+    gap: 20px;
+}
+
+.mini-card {
+    flex: 1;
+    padding: 30px;
+}
+
+.mini-card p {
+    margin-bottom: 0; 
+}
+
+/* Seção de Contato e Redes Sociais */
+.caixa-contato {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.botoes-contato {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-rede-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #FFFFFF;
+    transition: opacity 0.3s ease;
+}
+
+.btn-rede-social:hover {
+    opacity: 0.9;
+}
+
+.btn-whatsapp { background-color: #25D366; }
+.btn-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+.rede-social-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px 0 0 0;
+    color: #777777;
+    font-size: 14px;
+}
+
+/* RESPONSIVIDADE (Para o site funcionar no celular) */
+@media (max-width: 900px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    .barra-lateral {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .menu-lateral {
+        margin-top: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .conteudo-principal {
+        margin-left: 0;
+        padding: 20px;
+    }
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+    .lista-servicos {
+        flex-direction: column;
+    }
+    .botoes-contato {
+        flex-direction: column;
+    }
+}
+
+/* ========================================================
+   ANIMAÇÃO DOS CONTEÚDOS INTERNOS BASEADA NO SCROLL
+   ======================================================== */
+
+/* Animação para o card começar invisível */
+.card-arredondado h1,
+.card-arredondado h2,
+.card-arredondado h3 {
+    opacity: 0;
+    transform: translateX(-30px); /* Começa 30px rebaixado */
+    transition: opacity 1s ease, transform 1.4s ease;
+}
+
+.card-arredondado p{
+    opacity:0;
+    transform: translateX(30px); /* Começa 30px rebaixado */
+    transition: opacity 1s ease, transform 1.6s ease;
+}
+
+.card-arredondado span{
+    opacity:0;
+    transform: translateY(-30px);
+    transition: opactiy 1.3s ease, transform 1.3s ease;
+}
+
+.card-arredondado img,
+.card-arredondado .btn-principal{
+    opacity:0;
+    transition: opacity 2s ease;
+}
+
+.card-arredondado .botoes-contato {
+    opacity: 0;
+    transform: translateY(30px); /* Começa 30px rebaixado */
+    transition: opacity 1s ease, transform 1.4s ease;
+}
+
+/* inicia a animação exibindo o conteudo conforme o scroll */
+.card-arredondado.visivel h1,
+.card-arredondado.visivel h2,
+.card-arredondado.visivel h3{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card-arredondado.visivel p{
+    opacity:1;
+    transform: translateX(0);
+}
+.card-arredondado.visivel span{
+    opacity:1;
+    transform: translateY(0)
+}
+.card-arredondado.visivel img,
+.card-arredondado.visivel .btn-principal{
+    opacity:1;
+}
+.card-arredondado.visivel .botoes-contato {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
